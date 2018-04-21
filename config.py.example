@@ -1,0 +1,54 @@
+bot_token = ""  # Your bot token (which you got from botfather)
+bot_username = "@"  # Your bot username (for logging)
+wait_time = 15  # Time for bot to wait for new users (for group welcome if multiple users are joining chat in small time)
+wait_response_time  = 150 # Time fot bot to wait for response from user
+check_response = True # Check for a response (ignore respondents?)
+min_msg_count = 5 # Minimum number of messages to cancel overwriting (negative if ignore).
+clear_prev_users = True # Clear previous users from the list when there is no overwriting?
+
+# For /rules command
+rules = ""
+# Hours for each time period, please only enter numbers between 0 and 23 without
+current_daytime = {
+        "night":[0,1,2,3,4,5,6],
+        "morning":[7,8,9,10],
+        "day":[11,12,13,14,15,16,17],
+        "evening":[18,19,20,21,22,23]
+}
+# The begining of message is always formatted like that "{daytime_message} {username}!" where daytime message
+# is the message which will show depending on time of day on machine which running the bot
+daytime_messages = {
+    "night": [  # Please don't touch or change hashes(what's before colon sign)
+        "",
+        ""
+    ],
+    "morning": [
+        "",
+        ""
+    ],
+    "day": [
+        "",
+        ""
+    ],
+    "evening": [
+        "",
+        ""
+    ]
+}
+# !!!Seperate multiple variants of welcome message with comma(one of the variants will be chosen to show)
+welcome_user = [
+    "",
+    ""
+]  # Messages to welcome 1 user (new line will be in text like '\n')
+welcome_users = [
+    "",
+    ""
+]  # Messages to welcome multiple users
+
+
+def load_admins():
+    admins_list = []
+    with open('admins.cfg', 'r') as admins_file:
+        for admin_id in admins_file:
+            admins_list.append(int(admin_id))
+    return admins_list

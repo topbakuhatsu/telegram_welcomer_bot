@@ -12,6 +12,8 @@ import time
 import telepot
 import telepot.aio
 
+from telepot.text import apply_entities_as_markdown
+
 import config
 
 logging.basicConfig(format='%(asctime)s [%(levelname)s]: %(message)s', level=logging.INFO)
@@ -131,9 +133,9 @@ async def handle(msg):
             if 'text' in msg:
                 if msg['text'] == "/kick" or msg['text'] == "/ban":
                     await bot.kickChatMember(chat_id=chat_id,
-                        user_id=msg['reply_to_message']['from']['id'])
+                    user_id=msg['reply_to_message']['from']['id'])
                     await bot.sendMessage(chat_id=chat_id,
-					    text=f"user: {msg['reply_to_message']['from']['first_name']} ban")
+                    text=f"user: {msg['reply_to_message']['from']['first_name']} ban")
     if chat_type == 'supergroup' and msg['from']['id'] in admins_list:
         if 'text' in msg:
             if msg['text'] == "/get_id":
@@ -143,7 +145,8 @@ async def handle(msg):
                                           reply_to_message_id=msg['message_id'])
             if msg['text'] == "/rules":
                 await bot.sendMessage(chat_id=chat_id,
-                                      text=config.rules)
+                                      text=config.rules,
+                                      parse_mode='Markdown')
     #if 'new_chat_member' in msg and msg['new_chat_member']['id'] == config.Sergey:
     #    await bot.sendMessage(chat_id=chat_id,
     #        text=f"get ur ass outta here",

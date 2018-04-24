@@ -1,10 +1,13 @@
 bot_token = ""  # Your bot token (which you got from botfather)
 bot_username = "@"  # Your bot username (for logging)
-wait_time = 15  # Time for bot to wait for new users (for group welcome if multiple users are joining chat in small time)
+wait_time = 40
 wait_response_time  = 150 # Time fot bot to wait for response from user
 check_response = True # Check for a response (ignore respondents?)
 min_msg_count = 5 # Minimum number of messages to cancel overwriting (negative if ignore).
 clear_prev_users = True # Clear previous users from the list when there is no overwriting?
+myChat = 
+Sergey = 7929120
+
 
 # For /rules command
 rules = ""
@@ -19,32 +22,35 @@ current_daytime = {
 # is the message which will show depending on time of day on machine which running the bot
 daytime_messages = {
     "night": [  # Please don't touch or change hashes(what's before colon sign)
-        "",
-        ""
+        "Спать надо по ночам,"
     ],
     "morning": [
-        "",
-        ""
+        "Доброе утро,"
     ],
     "day": [
-        "",
-        ""
+        "Привет,",
+	"Так-то рабочее время,"
     ],
     "evening": [
-        "",
-        ""
+        "Добрый вечер,"
     ]
 }
 # !!!Seperate multiple variants of welcome message with comma(one of the variants will be chosen to show)
 welcome_user = [
-    "",
-    ""
+    "\nВ чем специализируешься в сфере I.T.? Какие ожидания от чата?\n\nТы можешь либо ответить, либо подписаться на канал @habrapub",
+    "\nЧто шаришь в I.T.? Чего ждешь от чата?\n\nОтвечай или отвечай!",
+	"\nЧто шаришь в I.T.? Чем можешь поделиться с чатом?",
+    "\nУ меня всего 2 вопроса к тебе:\n1. что ты знаешь в сфере I.T.?\n2. чего ты ждешь от данного чата?",
+    "\nХочу немного узнать о тебе. Чего ждешь от чата? Что шаришь в сфере I.T.?",
+	"\nРасскажи, что ты знаешь в ИТ? Зачем зашел в чат? Подписался на канал @habrapub?"
+	
 ]  # Messages to welcome 1 user (new line will be in text like '\n')
 welcome_users = [
-    "",
-    ""
+    "\nЗначит есть к вам вопросы: Зачем вы зашли в чат? Что вы знаете в сфере I.T.?",
+	"\nЕсть к вам вопросы:\nЧто вы знаете в сфере I.T.? Чем можете поделиться с чатом? Уже подписались на наш канал @habrapub?",
+    "\nА расскажите мне, зачем вы сюда зашли и что вы умеете в сфере I.T.?",
+	"\nВсего два простых вопроса к вам: Зачем вы зашли в чат? Какая ваша специализация в сфере I.T.? "
 ]  # Messages to welcome multiple users
-
 
 def load_admins():
     admins_list = []

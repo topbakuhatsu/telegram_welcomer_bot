@@ -1,6 +1,6 @@
 # Telegram - Welcomer
 
-`cp "config.py.example" "config.py"
+`cp "config.py.example" "config.py"`
 
 `touch "admins.cfg"`
 

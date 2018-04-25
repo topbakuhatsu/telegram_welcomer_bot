@@ -1,5 +1,9 @@
 # Telegram - Welcomer
 
+`cp "config.py.example" "config.py"
+
+`touch "admins.cfg"`
+
 `pip3 install -r "requirements.txt"`
 
 ```

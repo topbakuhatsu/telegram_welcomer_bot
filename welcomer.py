@@ -147,10 +147,6 @@ async def handle(msg):
                 await bot.sendMessage(chat_id=chat_id,
                                       text=config.rules,
                                       parse_mode='Markdown')
-    #if 'new_chat_member' in msg and msg['new_chat_member']['id'] == config.Sergey:
-    #    await bot.sendMessage(chat_id=chat_id,
-    #        text=f"get ur ass outta here",
-    #        reply_to_message_id=msg['message_id'])
     if 'new_chat_member' in msg and chat_type == 'supergroup':
         timestamp = int(time.time())
         await bot.restrictChatMember(chat_id=chat_id,

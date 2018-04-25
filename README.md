@@ -1,4 +1,4 @@
-# telegram_welcomer_bot
+# Telegram - Welcomer
 
 This bot will welcome anyone who will join supergroup and will store answers from joined user if needed.
 

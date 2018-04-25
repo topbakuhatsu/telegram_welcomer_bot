@@ -8,12 +8,9 @@ from itertools import chain
 from json import dumps
 from random import choice
 import time
-
 import telepot
 import telepot.aio
-
 from telepot.text import apply_entities_as_markdown
-
 import config
 
 logging.basicConfig(format='%(asctime)s [%(levelname)s]: %(message)s', level=logging.INFO)

@@ -5,9 +5,7 @@ wait_response_time  = 150 # Time fot bot to wait for response from user
 check_response = True # Check for a response (ignore respondents?)
 min_msg_count = 5 # Minimum number of messages to cancel overwriting (negative if ignore).
 clear_prev_users = True # Clear previous users from the list when there is no overwriting?
-myChat = 
-Sergey = 7929120
-
+myChat = ""
 
 # For /rules command
 rules = ""

@@ -11,3 +11,5 @@ sqlite3
 sqlite3 > .open --new answers.db
 sqlite3 > CREATE TABLE user_answers (id int, message_id int, username text, user_message text);
 ```
+
+* Creator: @yui_meow

@@ -7,11 +7,11 @@ from datetime import datetime
 from itertools import chain
 from json import dumps
 from random import choice
-from telepot.text import apply_entities_as_markdown
 import time
 import telepot
 import telepot.aio
 import config
+from telepot.text import apply_entities_as_markdown
 
 logging.basicConfig(format='%(asctime)s [%(levelname)s]: %(message)s', level=logging.INFO)
 logger = logging.getLogger(config.bot_username)

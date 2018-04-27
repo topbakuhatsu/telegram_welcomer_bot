@@ -125,7 +125,7 @@ async def handle(msg):
                                           reply_to_message_id=msg['message_id'])
             if msg['text'] == "/rules":
                 await bot.sendMessage(chat_id=chat_id,
-                                      text=config.rules
+                                      text=config.rules,
                                       parse_mode='Markdown')
     if 'new_chat_member' in msg and chat_type == 'supergroup':
         logger.info(f"Got new chat member {msg['new_chat_member']['first_name']}")
